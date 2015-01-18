@@ -3,5 +3,8 @@
         <record id="mrpext_worker" model="res.groups">
             <field name="name">mrpext / Worker</field>
         </record>
+
+        <menuitem id="base.menu_mrp_root" name="Manufacturing" groups ="mrpext_worker">
+        </menuitem>
     </data>
 </openerp>
