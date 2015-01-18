@@ -1,0 +1,100 @@
+<openerp>
+    <data>
+       <record model="ir.ui.view" id="productionrecord_tree_view">
+            <field name="name">productionrecord.tree</field>
+            <field name="model">mrpext.productionrecord</field>
+            <field name="arch" type="xml">
+                <tree string="Production Records"  default_order="date desc,workorder"> 
+                    <field name="date"/>
+                    <field name="workorder"/>                    
+                    <field name="worker"/>
+                    <field name="goodproducts"/>
+                    <field name="badproducts" />
+                    <field name="badratePercentageString"/>
+                    <field name="badratePercentage" widget="progressbar" string="badratePercentage Picture"/>
+                    <field name="create_uid"/>
+                </tree>
+            </field>
+        </record>
+
+            <record model="ir.ui.view" id="productionrecord_graph_view">
+                <field name="name">productionrecord.graph</field>
+                <field name="model">mrpext.productionrecord</field>
+                <field name="arch" type="xml">
+                    <graph string="Production Record Bad Rate" type="bar">
+                            <field name="date" type="row" interval="day"/>
+                            <field name="badrate" type="measure"/>
+                    </graph>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="productionrecord_search_view">
+                <field name="name">productionrecord.search</field>
+                <field name="model">mrpext.productionrecord</field>
+                <field name="arch" type="xml">
+                    <search string="Production Record Bad Rate search" type="bar">
+                            <field name="badproducts"/>
+                            <field name="badrate" />
+                            <filter name="very_bad_records" string = "Very bad" 
+                                domain ="[('badrate','>',0.8)]"/>
+                            <filter name="My_records" string = "My records" 
+                                domain ="['|',('create_uid','=',uid),('worker','=',uid)]"/>
+                            <group string="Group By">
+                                <filter name="group_by_workorder" 
+                                    context="{'group_by': 'workorder'}"/>
+                                <filter name="group_by_worker" 
+                                    context="{'group_by': 'create_uid'}"/>
+                            </group>
+                    </search>
+                </field>
+            </record>
+
+        <record model="ir.ui.view" id="productionrecord_form_view">
+            <field name="name">productionrecord.form</field>
+            <field name="model">mrpext.productionrecord</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header/>
+                    <sheet>
+                        <group col="4">
+                            <field name="workorder"/>
+                             
+                             <newline/>
+                             <field name="date"/>
+                            <field name="worker"/>        
+
+                            <newline/>
+                            <separator  colspan="4"/>
+                            <field name="goodproducts"/>
+                            <field name="badproducts" />
+                            
+                            <newline/>
+                            <field name="badratePercentageString"/>
+
+                            <newline/>
+                            <separator  colspan="4"  string="Other"/>
+                            <field name="create_uid" readonly="True"/>       
+                            <field name="create_date" readonly="True"/>  
+                             
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+<!--                              <field name="message_follower_ids" widget="mail_followers"/>
+                             <field name="message_ids" widget="mail_thread"/> -->
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="productionrecord_list_action">
+            <field name="name">Production Records</field>
+            <field name="res_model">mrpext.productionrecord</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,graph</field>
+            <field name="context" eval="{'search_default_My_records': 1}"/>
+        </record>
+ 
+        <menuitem id="productionrecords_list_menu" name="Production Records" parent="mrp.menu_mrp_manufacturing"
+                  action="productionrecord_list_action"/>           
+    </data>
+</openerp>

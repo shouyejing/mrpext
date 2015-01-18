@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mrpext
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-d023c07\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-13 03:12+0000\n"
+"PO-Revision-Date: 2015-01-13 13:24+0800\n"
+"Last-Translator: wangting <39181819@qq.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: zh_CN\n"
+
+#. module: mrpext
+#: code:addons/mrpext/models.py:45
+#, python-format
+msgid "Bad products can not be negative!"
+msgstr "次品产量不能为负数！"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,badproducts:0
+msgid "Badproducts"
+msgstr "次品产量"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,badrate:0
+msgid "Badrate"
+msgstr "次品率"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,badratePercentage:0
+msgid "Badratepercentage"
+msgstr "次品率"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,badratePercentageString:0
+msgid "Badratepercentagestring"
+msgstr "次品率"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,create_uid:0
+msgid "Created by"
+msgstr "创建者"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,create_date:0
+msgid "Created on"
+msgstr "创建日期"
+
+#. module: mrpext
+#: code:addons/mrpext/models.py:43
+#, python-format
+msgid "Good products can not be negative!"
+msgstr "良品产量不能为负数！"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,goodproducts:0
+msgid "Goodproducts"
+msgstr "良品产量"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_search_view
+msgid "Group By"
+msgstr "分组"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,write_uid:0
+msgid "Last Updated by"
+msgstr "最后更新者"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,write_date:0
+msgid "Last Updated on"
+msgstr "最后更新日期"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_search_view
+msgid "My records"
+msgstr "我的记录"
+
+#. module: mrpext
+#: code:addons/mrpext/models.py:33
+#, python-format
+msgid "N/A"
+msgstr "N/A"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_form_view
+msgid "Other"
+msgstr "其他"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_graph_view
+msgid "Production Record Bad Rate"
+msgstr "生产记录次品率"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_search_view
+msgid "Production Record Bad Rate search"
+msgstr "生产记录次品率查找视图"
+
+#. module: mrpext
+#: model:ir.actions.act_window,name:mrpext.productionrecord_list_action
+#: model:ir.ui.menu,name:mrpext.productionrecords_list_menu
+#: view:mrpext.productionrecord:mrpext.productionrecord_tree_view
+msgid "Production Records"
+msgstr "生产记录"
+
+#. module: mrpext
+#: code:addons/mrpext/models.py:47
+#, python-format
+msgid "Total products can not equals zero!"
+msgstr "总产量不能为0！"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,totalproducts:0
+msgid "Totalproducts"
+msgstr "总产量"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_search_view
+msgid "Very bad"
+msgstr "非常坏的"
+
+#. module: mrpext
+#: model:ir.model,name:mrpext.model_mrp_production_workcenter_line
+msgid "Work Order"
+msgstr "工单"
+
+#. module: mrpext
+#: view:mrpext.productionrecord:mrpext.productionrecord_tree_view
+msgid "badratePercentage Picture"
+msgstr "次品率图形"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,date:0
+msgid "date"
+msgstr "日期"
+
+#. module: mrpext
+#: field:mrp.production.workcenter.line,productionrecords:0
+msgid "productionrecords"
+msgstr "生产记录"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,worker:0
+msgid "worker"
+msgstr "操作工"
+
+#. module: mrpext
+#: field:mrpext.productionrecord,workorder:0
+msgid "workorder"
+msgstr "工单"

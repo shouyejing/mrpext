@@ -1,0 +1,24 @@
+<openerp>
+    <data>
+	<record model="ir.ui.view" id="mrp_operations.mrp_production_workcenter_form_view_inherit2">
+		<field name="name">Production Records</field>
+		<field name="model">mrp.production.workcenter.line</field>
+		<field name="inherit_id" ref="mrp_operations.mrp_production_workcenter_form_view_inherit"/>
+		<field name="arch" type="xml">
+			<xpath expr="/form/sheet/notebook">
+				<page string="Production Records">
+					<field name="productionrecords">
+						<tree default_order="date desc">
+						      <field name="date"/>
+					                    <field name="worker"/>
+					                    <field name="goodproducts" /> 
+					                    <field name="badproducts"/> 
+					                    <field name="badratePercentageString"/>
+						</tree>
+					</field>
+				</page>
+			</xpath>
+		</field>
+	</record>
+    </data>
+</openerp>
