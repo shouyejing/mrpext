@@ -1,6 +1,6 @@
 <openerp>
     <data>
-        <record id="group_worker" model="res.groups">
+        <record id="mrpext_worker" model="res.groups">
             <field name="name">mrpext / Worker</field>
         </record>
     </data>

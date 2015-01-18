@@ -12,7 +12,7 @@
         'security/ir.model.access.csv'
     ],
     'description': """
-版本1.8
+版本1.10
 
 主要功能：
 

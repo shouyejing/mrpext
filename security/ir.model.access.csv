@@ -1,3 +1,4 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-productionrecord_woker,productionrecord woker,model_mrpext_productionrecord,group_worker,1,1,1,1
-productionrecord_woker,productionrecord woker,model_mrpext_productionrecord,,1,0,0,0
+mrpext_productionrecord_AllRead,ProductionRecord AllRead,model_mrpext_productionrecord,,1,0,0,0
+mrpext_productionrecord_EmployeeRead,ProductionRecord Employee Read,model_mrpext_productionrecord,base.group_user,1,0,0,0
+mrpext_productionrecord_mrpext_Woker_FullControl,ProductionRecord Mrpext Worker FullControl,model_mrpext_productionrecord,mrpext_worker,1,1,1,1
