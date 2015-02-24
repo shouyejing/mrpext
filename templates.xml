@@ -1,0 +1,43 @@
+<openerp>
+    <data>
+        <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+<!--                <p t-if="teacher_index == 0">
+                    <t t-esc="'the type is %s' % type(teacher_all)"/>
+                </p>-->
+
+                <p t-if="teacher=='wangting'">
+                    <t t-esc="'第%d个:hello %s !!!' % (teacher_index,teacher)"/>
+                </p>
+                <p t-if="teacher!='wangting'">
+                    <t t-esc="'第%d个:%s' % (teacher_index,teacher)"/>
+                </p>
+
+            </t>
+        </template>
+
+        <template id="linkTemplate">
+            <p>我是子模板里出来的，点这里去网站：
+                <a t-att-href="link[1]">
+                    <t t-esc="link[0]" />
+                </a>
+                <t t-raw="0"/>
+            </p>
+        </template>
+
+        <template id="links">
+            <title>links</title>
+            <div t-foreach="links" t-as="l">
+                <t t-call="mrpext.linkTemplate">
+                    <t t-set="link" t-value="l"/>
+                    <p t-if="not l_last">======我是分隔线======</p>
+                </t>
+            </div>
+        </template>
+
+
+
+
+    </data>
+</openerp>

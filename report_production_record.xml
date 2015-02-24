@@ -1,0 +1,28 @@
+<openerp>
+    <data>
+       <template id="report_production_record">
+            <t t-call="report.html_container">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <h2>production record Report</h2>
+                        <h3>I am wangting 看到图片没？</h3>
+                        <img t-att-src="'/report/barcode/QR/%s' % 'I am wangting'"/>
+
+                        <t t-foreach="docs" t-as="o">
+                            <p>This object's name is <span t-field="o.name"/></p>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    <template id="customer_salereport" name="Customer Salereport" inherit_id="sale.report_saleorder_document" customize_show="True">
+        <xpath expr="//div[@class='page']" position="replace">
+            <div class="page">
+                <h1>Where is my Sale Report!</h1>
+
+            </div>
+        </xpath>
+    </template>
+    </data>
+</openerp>

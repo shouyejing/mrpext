@@ -9,11 +9,11 @@
 				<page string="Production Records">
 					<field name="productionrecords">
 						<tree default_order="date desc">
-						      <field name="date"/>
-					                    <field name="worker"/>
-					                    <field name="goodproducts" /> 
-					                    <field name="badproducts"/> 
-					                    <field name="badratePercentageString"/>
+						    <field name="date"/>
+                            <field name="worker"/>
+                            <field name="goodproducts" />
+                            <field name="badproducts"/>
+                            <field name="badratePercentageString"/>
 						</tree>
 					</field>
 				</page>

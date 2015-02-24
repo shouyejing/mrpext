@@ -9,10 +9,14 @@
         'views/productionrecord.xml',
         'views/workorder.xml',
         'security/security.xml',
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/ProductionRecord_workflow.xml',
+        'templates.xml',
+        'mrpext_report.xml',
+        'report_production_record.xml'
     ],
     'description': """
-版本1.10
+版本1.11
 
 主要功能：
 
@@ -39,6 +43,10 @@
 2015.1.13 更新：
 
   1、加入权限控制
+
+2015.1.24 更新：
+
+  1、加入一个工作流，新增的生产记录首先是草稿状态，然后发送给经理，经理可以确认是否有效。
 
     """
 

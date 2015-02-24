@@ -1,0 +1,12 @@
+<openerp>
+    <data>
+        <report
+            id="custom_report_production_record"
+            model="mrpext.productionrecord"
+            string="Production Record"
+            report_type="qweb-pdf"
+            name="mrpext.report_production_record"
+            attachment_use="False"
+        />
+    </data>
+</openerp>
