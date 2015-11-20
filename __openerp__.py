@@ -1,15 +1,15 @@
-#-*- coding:utf-8 –*-
+# -*- coding:utf-8 –*-
 {
     'name': "mrpext",
     'version': '1.0',
-    'depends': ['base','mrp','mrp_operations'],
+    'depends': ['base', 'mrp', 'mrp_operations'],
     'author': "wangting",
     'category': 'custom',
-    'data':[
+    'data': [
         'views/productionrecord.xml',
         'views/workorder.xml',
-        'security/security.xml',
-        'security/ir.model.access.csv'
+        # 'security/security.xml',
+        # 'security/ir.model.access.csv'
     ],
     'description': """
 版本1.10
